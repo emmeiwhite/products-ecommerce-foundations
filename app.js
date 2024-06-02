@@ -25,7 +25,7 @@ const displayProducts = list => {
       } = product
       const img = image[0].url
       return `<a
-            href="product.html"
+            href="product.html?id=${id}"
             class="single-product"
             data-id=${id}
           >
