@@ -43,7 +43,9 @@ const displayProducts = list => {
     })
     .join('')
 
-  products.innerHTML = productsHTML
+  products.innerHTML = `<div class="products-container">
+           ${productsHTML}
+        </div>`
 }
 
 const start = async () => {
