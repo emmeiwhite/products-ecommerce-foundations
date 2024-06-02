@@ -18,8 +18,28 @@ const getProducts = async () => {
 const displayProducts = list => {
   console.log(list)
   const productsHTML = list
-    .map(({ id }) => {
-      return id
+    .map(product => {
+      const {
+        id,
+        fields: { name, price, image }
+      } = product
+      const img = image[0].url
+      return `<a
+            href="product.html"
+            class="single-product"
+            data-id=${id}
+          >
+            <img
+              src="${img}"
+              alt="title"
+              class="img single-product-img"
+            />
+
+            <footer>
+              <h5 class="name">${name}</h5>
+              <span class="price">${price}</span>
+            </footer>
+          </a>`
     })
     .join('')
 
