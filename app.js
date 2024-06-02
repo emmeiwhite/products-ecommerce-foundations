@@ -24,6 +24,7 @@ const displayProducts = list => {
         fields: { name, price, image }
       } = product
       const img = image[0].url
+      const formatPrice = price / 100
       return `<a
             href="product.html?id=${id}"
             class="single-product"
@@ -37,7 +38,7 @@ const displayProducts = list => {
 
             <footer>
               <h5 class="name">${name}</h5>
-              <span class="price">${price}</span>
+              <span class="price">${formatPrice}</span>
             </footer>
           </a>`
     })
